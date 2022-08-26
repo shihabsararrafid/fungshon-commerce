@@ -6,7 +6,7 @@ import SingleProduct from "./SingleProduct";
 const PopularProducts = () => {
   const [popularProductsID] = LoadPopularProducts();
   // loading data from custom hooks load data
-  const popular = popularProductsID?.slice(0, 3);
+  const popular = popularProductsID?.slice(0, 4);
   const [products, setProducts] = LoadData();
 
   return (
@@ -21,7 +21,7 @@ const PopularProducts = () => {
         </p>
         <p></p>
       </div>
-      <div>
+      <div className="lg:w-[85%] my-10 md:w-[90%] gap-8 mx-auto grid grid-cols-4">
         {popular?.map((p) => (
           <SingleProduct id={p}></SingleProduct>
         ))}
