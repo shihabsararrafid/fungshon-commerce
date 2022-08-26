@@ -10,9 +10,3 @@
     color: #F09522;
     border:2px solid #F09522;
 }
-@media screen and(max-width:970px) {
-    .banner-container{
-        flex-direction: column;
-    }
-    
-}
