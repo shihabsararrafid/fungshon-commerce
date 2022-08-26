@@ -1,3 +1,10 @@
 .navigation-bar{
     font-weight: 800;
 }
+.navigation-small{
+    flex-direction: column;
+    transform: translateY(96px);
+    right: 12px;
+    position: absolute;
+    z-index: 1000;
+}
