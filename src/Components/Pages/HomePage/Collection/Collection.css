@@ -13,7 +13,7 @@
     
 }
 .box:hover{
-    border-color: black;
+    border-color: #F09522;
 }
 .check-btn{
     /* mx-6 cursor-pointer  absolute bottom-[8%]   */

@@ -21,11 +21,29 @@ const Collection = () => {
       </div>
       <div className="img-container w-[80%] relative">
         <img className="w-full" src={women} alt="" />
-        <div className="box"></div>
+        <div className="box">
+          <h1 className="absolute bottom-[15%] left-[9%] text-4xl">
+            <span className="bg-[#F09522] block py-1 px-3">Women's</span>
+            Collection
+          </h1>
+          <p className="check-btn">
+            Check now
+            <span className="line"></span>
+          </p>
+        </div>
       </div>
       <div className="img-container w-[80%] relative">
         <img className="w-full" src={men} alt="" />
-        <div className="box"></div>
+        <div className="box">
+          <h1 className="absolute bottom-[15%] left-[9%] text-4xl">
+            <span className="bg-[#F09522] block py-1 px-3">Men's</span>
+            Collection
+          </h1>
+          <p className="check-btn">
+            Check now
+            <span className="line"></span>
+          </p>
+        </div>
       </div>
     </div>
   );
