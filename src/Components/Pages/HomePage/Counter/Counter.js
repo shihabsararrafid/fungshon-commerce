@@ -46,8 +46,8 @@ const Counter = () => {
   }, []);
 
   return (
-    <div className="lg:w-[410px] mx-auto lg:mx-0 md:w-[70%] w-full pt-6 px-16 text-4xl h-[135px] text-white bg-black">
-      <h1 className="text-2xl text-justify">50% Discount Till</h1>
+    <div className="lg:w-[410px] mx-auto lg:mx-0 md:w-[70%] w-full pt-6 px-6 md:px-16 text-2xl lg:text-4xl h-[135px] text-white bg-black">
+      <h1 className="lg:text-2xl text-lg text-justify">50% Discount Till</h1>
       {/* <p>{timer}</p> */}
       <div className="grid grid-cols-4 px-0">
         <div>{days}</div>
