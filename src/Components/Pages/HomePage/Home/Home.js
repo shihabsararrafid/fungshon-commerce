@@ -1,5 +1,6 @@
 import React from "react";
 import Banner from "../Banner/Banner";
+import Collection from "../Collection/Collection";
 import Specialbenefit from "../SpecialBenefit/Specialbenefit";
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
     <div className="w-full">
       <Banner></Banner>
       <Specialbenefit></Specialbenefit>
+      <Collection></Collection>
     </div>
   );
 };
