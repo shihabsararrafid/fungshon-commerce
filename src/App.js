@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import Advertise from './Components/Shared/Advertise/Advertise';
 
 function App() {
   return (
     <div className='App' >
-      <h1 className='font-normal'>Rafid</h1>
-      <p className='font-bold'>THis must  bne</p>
+      <Advertise></Advertise>
     </div>
   );
 }
