@@ -10,7 +10,7 @@ const Counter = () => {
   const getTimeRemaining = () => {
     const total =
       new Date("Aug 31, 2022 10:27:25").getTime() - new Date().getTime();
-    console.log(total);
+    // console.log(total);
     const seconds = Math.floor((total % (1000 * 60)) / 1000);
     const minutes = Math.floor((total % (1000 * 60 * 60)) / 1000 / 60);
     const hours = Math.floor((total % (1000 * 60 * 60 * 24)) / 1000 / 60 / 60);
