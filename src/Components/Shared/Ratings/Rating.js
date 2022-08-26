@@ -8,13 +8,16 @@ import {
 const Rating = ({ rating }) => {
   const [fullStar, halfStar, nullstar] = ShowRatings(rating);
   return (
-    <div>
+    <div className="text-yellow-400 flex gap-2">
       {fullStar.map((p) => (
         <TiStarFullOutline></TiStarFullOutline>
       ))}
-      {
-        halfStar.m
-      }
+      {halfStar.map((p) => (
+        <TiStarHalfOutline></TiStarHalfOutline>
+      ))}
+      {nullstar.map((p) => (
+        <TiStarOutline></TiStarOutline>
+      ))}
     </div>
   );
 };

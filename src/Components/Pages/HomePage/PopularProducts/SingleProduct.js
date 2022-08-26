@@ -8,8 +8,9 @@ const SingleProduct = ({ id }) => {
   return (
     <div className="border-[1px] shadow-lg">
       <img className="h-[356px]  object-cover" src={product?.image} alt="" />
-      <p>
-        Ratings :<Rating rating={product?.rating?.rate}></Rating>
+      <p className="flex gap-5 px-3 items-center">
+        Ratings : <span>{product?.rating?.rate}</span>
+        <Rating rating={product?.rating?.rate}></Rating>
       </p>
     </div>
   );
