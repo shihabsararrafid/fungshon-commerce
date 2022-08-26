@@ -1,0 +1,7 @@
+@media screen and (max-width:400px) {
+    .small-container{
+        flex-direction: column;
+        align-items: center;
+        padding: auto;
+    }
+}
