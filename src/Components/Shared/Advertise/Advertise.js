@@ -12,6 +12,7 @@ const Advertise = () => {
             <img className='block mx-3 cursor-pointer' src={fbicon} alt="" />
             <img className='block mx-3 cursor-pointer' src={instaicon} alt="" />
             <img className='block mx-3 cursor-pointer' src={pintericon} alt="" />
+        
             </div> 
           </div>
         </div>
