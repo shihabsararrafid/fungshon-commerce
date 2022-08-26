@@ -3,8 +3,12 @@
 }
 .navigation-small{
     flex-direction: column;
-    transform: translateY(96px);
+    transform: translateY(110px);
     right: 12px;
     position: absolute;
     z-index: 1000;
+    background-color: black;
+    padding:0 50px 0px 50px;
+    border-radius: 10px;
+    color: white;
 }
