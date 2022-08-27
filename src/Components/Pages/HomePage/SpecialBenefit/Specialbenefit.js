@@ -2,7 +2,7 @@ import React from "react";
 import delivery from "./../../../../Images/benefit/tracking 1 (1).png";
 const Specialbenefit = () => {
   return (
-    <div className="lg:w-[85%] justify-between grid md:grid-cols-2 w-full  grid-cols-1  gap-5 lg:grid-cols-4 mx-auto">
+    <div className="lg:w-[85%]  justify-between grid md:grid-cols-2 w-full  grid-cols-1  gap-5 lg:grid-cols-4 mx-auto">
       <div className="flex mx-auto lg:mx-0 items-center gap-3 ">
         <img src={delivery} alt="" />
         <div>

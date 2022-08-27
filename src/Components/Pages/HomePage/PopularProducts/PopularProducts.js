@@ -7,7 +7,6 @@ const PopularProducts = ({ getCartID }) => {
   const [popularProductsID] = LoadPopularProducts();
   // loading data from custom hooks load data
   const popularContainer = (id) => {
-    
     console.log("Rafid is calling you", id);
     getCartID(id);
   };
@@ -15,7 +14,7 @@ const PopularProducts = ({ getCartID }) => {
   const [products, setProducts] = LoadData();
 
   return (
-    <div>
+    <div className="bg-[#D9D9D9] p-7">
       <div>
         <h1 className="text-4xl text-center">Popular Products</h1>
         <p className="text-center">

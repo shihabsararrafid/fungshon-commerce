@@ -30,7 +30,9 @@ function App() {
 
           <Route
             path="/productDetail/:id"
-            element={<ProductDetail></ProductDetail>}
+            element={
+              <ProductDetail getAddedCartId={getAddedCartId}></ProductDetail>
+            }
           ></Route>
         </Routes>
       </div>

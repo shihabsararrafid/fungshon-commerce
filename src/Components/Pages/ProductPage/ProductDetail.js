@@ -5,7 +5,27 @@ import Rating from "../../Shared/Ratings/Rating";
 import { BsChevronDown } from "react-icons/bs";
 import wishlist from "./../../../Images/Icons/wishlist (1).png";
 import compare from "./../../../Images/Icons/compare.png";
-const ProductDetail = () => {
+import SocialIcon from "../../Shared/SocialIcon/SocialIcon";
+import PopularProducts from "../HomePage/PopularProducts/PopularProducts";
+import Specialbenefit from "../HomePage/SpecialBenefit/Specialbenefit";
+import cogoToast from "cogo-toast";
+const ProductDetail = ({ getAddedCartId }) => {
+  const [ids, setIds] = useState([]);
+  const getCartID = (id) => {
+    console.log("id is getting from home component", id);
+    const find = ids.find((i) => i === id);
+    if (find === undefined) {
+      setIds([...ids, id]);
+      cogoToast.success(" Added to Cart!", {
+        position: "top-center",
+      });
+    } else {
+      cogoToast.info("Item is already in the cart! ", {
+        position: "top-center",
+      });
+    }
+  };
+  getAddedCartId(ids);
   const { id } = useParams();
   console.log(id);
   const [product, setProduct] = useState([]);
@@ -16,23 +36,34 @@ const ProductDetail = () => {
   }, [id]);
   return (
     <div className="w-full">
-      Product id:{id}
-      <div className="lg:w-[75%] flex gap-x-[20px] mx-auto">
+      <div className="lg:w-[75%] mb-14 grid grid-cols-2 gap-x-[20px] mx-auto">
+        {/* div1 */}
         <div>
           <img
             className="h-[695px] w-[524px] object-fit"
             src={product?.image}
             alt=""
           />
+          <div className="grid mt-5 grid-cols-3 gap-3">
+            <div className="w-[161px] h-[161px] flex justify-center bg-[#a59e9e]  items-center">
+              <p>Preview1</p>
+            </div>
+            <div className="w-[161px] h-[161px] flex justify-center bg-[#a59e9e]  items-center">
+              <p>Preview2</p>
+            </div>
+            <div className="w-[161px] h-[161px] flex justify-center bg-[#a59e9e]  items-center">
+              <p>Preview3</p>
+            </div>
+          </div>
         </div>
-        <div className="p-6 flex flex-col gap-y-2">
+        {/* div2 */}
+        <div className="p-6 flex flex-col gap-y-[25px]">
           <p>{product?.title}</p>
           <div className="flex gap-3">
             {" "}
             <p>${product?.price}</p>
             <p className="line-through text-[#B5B2B2]">${product?.price}</p>
           </div>
-
           <p>
             <Rating rating={product?.rating?.rate}></Rating>
           </p>
@@ -75,8 +106,43 @@ const ProductDetail = () => {
               <p>Add to Compare</p>
             </div>
           </div>
+          <p className="text-sm">
+            It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking at its layout. The point
+            of using Lorem Ipsum is that it has a more-or-less page when looking
+            at its layout. The point of using Lorem Ipsum is that it has a
+            more-or-less
+          </p>{" "}
+          <div className="mt-12">
+            <div className="flex gap-3">
+              <input className="bg-gray-600" type="checkbox" name="" id="" />
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere
+                reiciendis enim iste?
+              </p>
+            </div>
+            <div className="flex gap-3">
+              <input className="bg-gray-600" type="checkbox" name="" id="" />
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere
+                reiciendis enim iste?
+              </p>
+            </div>
+            <div className="my-4">
+              <p className="flex gap-1">
+                Share :<SocialIcon></SocialIcon>{" "}
+              </p>
+            </div>
+          </div>
         </div>
+        {/* div3 */}
+
+        {/* div4 */}
       </div>
+      <div className="my-10">
+        <Specialbenefit></Specialbenefit>
+      </div>
+      <PopularProducts getCartID={getCartID}></PopularProducts>
     </div>
   );
 };
