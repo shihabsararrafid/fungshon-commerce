@@ -40,7 +40,11 @@ const SingleProduct = ({ id, popularContainer }) => {
           <Circle></Circle>
         </p>
       </div>
-      <div className="cartWishlistNavigator rounded-lg  absolute w-[100%] h-[100%] top-0 left-0 hover:opacity-90 duration-500 opacity-0 bg-[#8E8C86] ">
+      <CartWishlistNavigator
+        id={id}
+        isClicked={isClicked}
+      ></CartWishlistNavigator>
+      {/* <div className="cartWishlistNavigator rounded-lg  absolute w-[100%] h-[100%] top-0 left-0 hover:opacity-90 duration-500 opacity-0 bg-[#8E8C86] ">
         <div className="absolute left-[25%] top-[50%]">
           <CartWishlistNavigator
             id={id}
@@ -62,7 +66,7 @@ const SingleProduct = ({ id, popularContainer }) => {
             <AiOutlineEye></AiOutlineEye>
           </p>
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -5,7 +5,7 @@ import bannersmall from "./../../../../Images/Banner/bannersm.png";
 import "./Banner.css";
 const Banner = () => {
   return (
-    <div className="lg:w-[85%] banner-container md:w-[95%] w-full mx-auto my-20 lg:justify-between flex flex-col lg:flex-row  ">
+    <div className="lg:w-[85vw] md:w-[90vw] banner-container  w-full md:mx-auto mx-0 my-20 lg:justify-between flex flex-col lg:flex-row  ">
       <div className="lg:w-[40%] w-full text-justify">
         {" "}
         <h1 className="md:text-6xl text-3xl  my-6">Top Designers Pick</h1>
