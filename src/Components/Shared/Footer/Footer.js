@@ -39,7 +39,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="lg:mt-[120px]">
+      <div className="lg:mt-[120px] mt-[60px]">
         <hr />
         <div className="mt-[30px] text-sm font-serif">
           Copyright @ Funshion. All Right Reserved.
