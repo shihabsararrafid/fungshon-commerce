@@ -3,9 +3,14 @@ import LoadData from "../../../Hooks/LoadData";
 import LoadPopularProducts from "../../../Hooks/LoadPopularProducts";
 import SingleProduct from "./SingleProduct";
 import "./PopularProduct.css";
-const PopularProducts = () => {
+const PopularProducts = ({ getCartID }) => {
   const [popularProductsID] = LoadPopularProducts();
   // loading data from custom hooks load data
+  const popularContainer = (id) => {
+    
+    console.log("Rafid is calling you", id);
+    getCartID(id);
+  };
   const popular = popularProductsID?.slice(0, 4);
   const [products, setProducts] = LoadData();
 
@@ -21,7 +26,10 @@ const PopularProducts = () => {
       </div>
       <div className="lg:w-[85%] popular-container my-10 md:w-[90%] gap-8 mx-auto grid lg:grid-cols-4">
         {popular?.map((p) => (
-          <SingleProduct id={p}></SingleProduct>
+          <SingleProduct
+            id={p}
+            popularContainer={popularContainer}
+          ></SingleProduct>
         ))}
       </div>
     </div>

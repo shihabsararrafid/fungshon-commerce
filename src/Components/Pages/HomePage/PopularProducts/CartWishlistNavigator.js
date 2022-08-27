@@ -1,9 +1,11 @@
 import React from "react";
 
-const CartWishlistNavigator = () => {
+const CartWishlistNavigator = ({ id, isClicked }) => {
   return (
     <div>
-      <button className="btn btn-hover">Add To Cart</button>
+      <button onClick={() => isClicked(id)} className="btn btn-hover">
+        Add To Cart
+      </button>
     </div>
   );
 };
