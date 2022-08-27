@@ -43,7 +43,16 @@ const Header = () => {
           <ul className="icon flex">
             <BsSearch className="text-2xl  cursor-pointer mx-2 "></BsSearch>
             <CgProfile className="text-2xl cursor-pointer mx-2 "></CgProfile>
-            <BsBag className="text-2xl     cursor-pointer mx-2  "></BsBag>
+            <p className="relative">
+              <BsBag className="text-2xl w-full    cursor-pointer mx-2  "></BsBag>
+              <p
+                className={`absolute  rounded-full px-[10px] py-[1px] text-white font-mono font-bold  ${
+                  arrId.length === 0 ? "bg-red-500" : "bg-green-600"
+                }  -top-[10px] -right-[19px]`}
+              >
+                {arrId.length}
+              </p>
+            </p>
             <FiAlignLeft
               onClick={() => setOpen(!isOpen)}
               className="text-2xl md:hidden    cursor-pointer mx-2  "
