@@ -7,6 +7,7 @@ import { createContext, useContext, useState } from "react";
 import cogoToast from "cogo-toast";
 import { Routes, Route, Link } from "react-router-dom";
 import ProductDetail from "./Components/Pages/ProductPage/ProductDetail";
+import Footer from "./Components/Shared/Footer/Footer";
 export const useCartId = createContext([]);
 function App() {
   const [cartId, setCartId] = useState([]);
@@ -54,6 +55,7 @@ function App() {
             }
           ></Route>
         </Routes>
+        <Footer></Footer>
       </div>
     </useCartId.Provider>
   );
