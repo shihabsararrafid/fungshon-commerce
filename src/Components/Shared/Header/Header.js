@@ -44,7 +44,11 @@ const Header = () => {
             <BsSearch className="text-2xl  cursor-pointer mx-2 "></BsSearch>
             <CgProfile className="text-2xl cursor-pointer mx-2 "></CgProfile>
             <p className="relative">
-              <BsBag className="text-2xl w-full    cursor-pointer mx-2  "></BsBag>
+              <Link to="cart">
+                {" "}
+                <BsBag className="text-2xl w-full    cursor-pointer mx-2  "></BsBag>
+              </Link>
+
               <p
                 className={`absolute  rounded-full px-[8px] py-[1px] text-white font-mono font-bold  ${
                   arrId.length === 0 ? "bg-red-500" : "bg-green-600"
