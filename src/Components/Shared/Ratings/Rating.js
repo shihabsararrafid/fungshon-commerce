@@ -8,7 +8,7 @@ import {
 const Rating = ({ rating }) => {
   const [fullStar, halfStar, nullstar] = ShowRatings(rating);
   return (
-    <div className="text-yellow-400 flex gap-2">
+    <div className="text-[#F09522] flex gap-[1px]">
       {fullStar.map((p) => (
         <TiStarFullOutline></TiStarFullOutline>
       ))}
