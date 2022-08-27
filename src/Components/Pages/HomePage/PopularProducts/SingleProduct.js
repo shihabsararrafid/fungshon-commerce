@@ -34,10 +34,16 @@ const SingleProduct = ({ id }) => {
         <div className="absolute left-[25%] top-[50%]">
           <CartWishlistNavigator></CartWishlistNavigator>
         </div>
-        <p className="cursor-pointer hover:bg-white hover:text-[#F09522] hover:border-[1px] duration-200  absolute top-[20px] right-[18px] bg-[#F09522] h-[32px] w-[32px] text-white rounded-full p-2">
+        <p
+          title="Add to Favourites"
+          className="cursor-pointer hover:bg-white hover:text-[#F09522] hover:border-[1px] duration-200  absolute top-[20px] right-[18px] bg-[#F09522] h-[32px] w-[32px] text-white rounded-full p-2"
+        >
           <GiSelfLove></GiSelfLove>
         </p>
-        <p className="top-[60px] hover:bg-white hover:text-[#F09522] hover:border-[1px] duration-200  right-[18px] cursor-pointer absolute  bg-[#F09522] h-[32px] w-[32px] text-white rounded-full p-2">
+        <p
+          title="See More Details"
+          className="top-[60px] hover:bg-white hover:text-[#F09522] hover:border-[1px] duration-200  right-[18px] cursor-pointer absolute  bg-[#F09522] h-[32px] w-[32px] text-white rounded-full p-2"
+        >
           <AiOutlineEye></AiOutlineEye>
         </p>
       </div>

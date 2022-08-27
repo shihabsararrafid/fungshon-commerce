@@ -1,0 +1,16 @@
+@media screen and (max-width:1200px) {
+    .popular-container{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media screen and (max-width:950px) {
+    .popular-container{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width:550px) {
+    .popular-container{
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+}
