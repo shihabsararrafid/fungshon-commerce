@@ -36,28 +36,28 @@ const ProductDetail = ({ getAddedCartId, getNewId }) => {
   }, [id]);
   return (
     <div className="w-full">
-      <div className="lg:w-[75%] mb-14 grid grid-cols-2 gap-x-[20px] mx-auto">
+      <div className="lg:w-[75%] mb-14 grid grid-cols-1 lg:grid-cols-2 gap-x-[20px] items-center justify-center gap-y-[50px] mx-auto">
         {/* div1 */}
-        <div>
+        <div className="mx-auto">
           <img
             className="h-[695px] w-[524px] object-fit"
             src={product?.image}
             alt=""
           />
-          <div className="grid mt-5 grid-cols-3 gap-3">
-            <div className="w-[161px] h-[161px] flex justify-center bg-[#a59e9e]  items-center">
+          <div className="grid mt-5 md:grid-cols-2 grid-cols-1 lg:grid-cols-3 justify-center items-center gap-3">
+            <div className="md:w-[161px] w-full h-[161px] flex justify-center bg-[#a59e9e]  items-center">
               <p>Preview1</p>
             </div>
-            <div className="w-[161px] h-[161px] flex justify-center bg-[#a59e9e]  items-center">
+            <div className="md:w-[161px] w-full h-[161px] flex justify-center bg-[#a59e9e]  items-center">
               <p>Preview2</p>
             </div>
-            <div className="w-[161px] h-[161px] flex justify-center bg-[#a59e9e]  items-center">
+            <div className="md:w-[161px] w-full h-[161px] flex justify-center bg-[#a59e9e]  items-center">
               <p>Preview3</p>
             </div>
           </div>
         </div>
         {/* div2 */}
-        <div className="p-6 flex flex-col gap-y-[25px]">
+        <div className="p-6 mx-0 sm:mx-20 lg:mx-0 flex flex-col gap-y-[25px]">
           <p>{product?.title}</p>
           <div className="flex gap-3">
             {" "}
