@@ -9,7 +9,7 @@ import SocialIcon from "../../Shared/SocialIcon/SocialIcon";
 import PopularProducts from "../HomePage/PopularProducts/PopularProducts";
 import Specialbenefit from "../HomePage/SpecialBenefit/Specialbenefit";
 import cogoToast from "cogo-toast";
-const ProductDetail = ({ getAddedCartId }) => {
+const ProductDetail = ({ getAddedCartId, getNewId }) => {
   const [ids, setIds] = useState([]);
   const getCartID = (id) => {
     console.log("id is getting from home component", id);
@@ -90,7 +90,7 @@ const ProductDetail = ({ getAddedCartId }) => {
             Only {product?.rating?.count} Left In Stock
           </p>
           <p className="flex gap-7">
-            <button id="btna" className="btn">
+            <button onClick={() => getNewId(id)} id="btna" className="btn">
               Add To Cart
             </button>
             <button className="btn">Buy Now</button>
