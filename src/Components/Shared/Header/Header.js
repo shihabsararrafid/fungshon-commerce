@@ -25,7 +25,7 @@ const Header = () => {
              md:flex  md:mr-8  items-center`}
           >
             <li className="md:mx-2  my-1">
-              <Link to="/home">Home</Link>{" "}
+              <Link to="/">Home</Link>{" "}
             </li>
             <li className="md:mx-2 my-1">
               <Link to="/about">About</Link>
@@ -46,9 +46,9 @@ const Header = () => {
             <p className="relative">
               <BsBag className="text-2xl w-full    cursor-pointer mx-2  "></BsBag>
               <p
-                className={`absolute  rounded-full px-[10px] py-[1px] text-white font-mono font-bold  ${
+                className={`absolute  rounded-full px-[8px] py-[1px] text-white font-mono font-bold  ${
                   arrId.length === 0 ? "bg-red-500" : "bg-green-600"
-                }  -top-[10px] -right-[19px]`}
+                }  -top-[8px] left-[2px]`}
               >
                 {arrId.length}
               </p>

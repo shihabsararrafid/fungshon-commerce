@@ -6,6 +6,7 @@ import CartWishlistNavigator from "./CartWishlistNavigator";
 import { AiOutlineEye } from "react-icons/ai";
 import { GiSelfLove } from "react-icons/gi";
 import love from "./../../../../Images/CartRelated/love.png";
+import { Routes, Route, Link } from "react-router-dom";
 const SingleProduct = ({ id, popularContainer }) => {
   const dot = ".........";
   const isClicked = (id) => {
@@ -52,12 +53,15 @@ const SingleProduct = ({ id, popularContainer }) => {
         >
           <GiSelfLove></GiSelfLove>
         </p>
-        <p
-          title="See More Details"
-          className="top-[60px] hover:bg-white hover:text-[#F09522] hover:border-[1px] duration-200  right-[18px] cursor-pointer absolute  bg-[#F09522] h-[32px] w-[32px] text-white rounded-full p-2"
-        >
-          <AiOutlineEye></AiOutlineEye>
-        </p>
+        <Link to={`productDetail/${id}`}>
+          {" "}
+          <p
+            title="See More Details"
+            className="top-[60px] hover:bg-white hover:text-[#F09522] hover:border-[1px] duration-200  right-[18px] cursor-pointer absolute  bg-[#F09522] h-[32px] w-[32px] text-white rounded-full p-2"
+          >
+            <AiOutlineEye></AiOutlineEye>
+          </p>
+        </Link>
       </div>
     </div>
   );

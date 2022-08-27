@@ -5,7 +5,8 @@ import Header from "./Components/Shared/Header/Header";
 import Home from "./Components/Pages/HomePage/Home/Home";
 import { createContext, useContext, useState } from "react";
 import cogoToast from "cogo-toast";
-
+import { Routes, Route, Link } from "react-router-dom";
+import ProductDetail from "./Components/Pages/ProductPage/ProductDetail";
 export const useCartId = createContext([]);
 function App() {
   const [cartId, setCartId] = useState([]);
@@ -21,7 +22,17 @@ function App() {
         <Advertise></Advertise>
         <Header></Header>
         <hr className="shadow-2xl" />
-        <Home getAddedCartId={getAddedCartId}></Home>
+        <Routes>
+          <Route
+            path="/"
+            element={<Home getAddedCartId={getAddedCartId}></Home>}
+          ></Route>
+
+          <Route
+            path="/productDetail/:id"
+            element={<ProductDetail></ProductDetail>}
+          ></Route>
+        </Routes>
       </div>
     </useCartId.Provider>
   );
