@@ -16,10 +16,11 @@ function App() {
     setCartId(arr);
   };
   const getNewId = (id) => {
+    const newId = parseInt(id);
     console.log(id);
-    const find = cartId.find((i) => i === id);
+    const find = cartId.find((i) => i === newId);
     if (find === undefined) {
-      const newArr = cartId.push(id);
+      const newArr = cartId.push(newId);
       setCartId(newArr);
       cogoToast.success(" Added to Cart!", {
         position: "top-center",
