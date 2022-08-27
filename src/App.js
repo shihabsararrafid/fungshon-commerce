@@ -8,6 +8,7 @@ import cogoToast from "cogo-toast";
 import { Routes, Route, Link } from "react-router-dom";
 import ProductDetail from "./Components/Pages/ProductPage/ProductDetail";
 import Footer from "./Components/Shared/Footer/Footer";
+import AllCollection from "./Components/Pages/ShopProduct/AllCollection";
 export const useCartId = createContext([]);
 function App() {
   const [cartId, setCartId] = useState([]);
@@ -54,6 +55,7 @@ function App() {
               ></ProductDetail>
             }
           ></Route>
+          <Route path="/shop" element={<AllCollection></AllCollection>}></Route>
         </Routes>
         <Footer></Footer>
       </div>
