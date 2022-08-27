@@ -14,7 +14,9 @@ const Banner = () => {
           readable content of a page when looking at its layout. The point of
           using Lorem Ipsum is that it has a more-or-less
         </p>
-        <button className="block mx-auto lg:mx-0 mb-20 btn">Shop Now</button>
+        <button className="block btn-hover mx-auto lg:mx-0 mb-20 btn">
+          Shop Now
+        </button>
         <Counter></Counter>
       </div>
       <div className=" lg:relative my-10 lg:my-0   px-auto ">
