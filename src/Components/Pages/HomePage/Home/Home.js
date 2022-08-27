@@ -1,3 +1,4 @@
+import cogoToast from "cogo-toast";
 import React, { createContext, useState } from "react";
 import Banner from "../Banner/Banner";
 import Collection from "../Collection/Collection";
@@ -11,6 +12,13 @@ const Home = ({ getAddedCartId }) => {
     const find = ids.find((i) => i === id);
     if (find === undefined) {
       setIds([...ids, id]);
+      cogoToast.success(" Added to Cart!", {
+        position: "top-center",
+      });
+    } else {
+      cogoToast.info("Item is already in the cart! ", {
+        position: "top-center",
+      });
     }
   };
   getAddedCartId(ids);

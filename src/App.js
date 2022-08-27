@@ -4,12 +4,14 @@ import Advertise from "./Components/Shared/Advertise/Advertise";
 import Header from "./Components/Shared/Header/Header";
 import Home from "./Components/Pages/HomePage/Home/Home";
 import { createContext, useContext, useState } from "react";
+import cogoToast from "cogo-toast";
 
 export const useCartId = createContext([]);
 function App() {
   const [cartId, setCartId] = useState([]);
   const getAddedCartId = (arr) => {
     console.log(arr.length, arr, "it is from app component");
+
     setCartId(arr);
   };
 
