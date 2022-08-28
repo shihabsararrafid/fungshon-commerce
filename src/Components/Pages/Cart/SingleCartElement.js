@@ -2,40 +2,37 @@ import React, { useEffect, useState } from "react";
 
 const SingleCartElement = ({ id }) => {
   const [product, setProduct] = useState([]);
+  const [count, setCount] = useState(1);
   console.log(product, id);
-  //const [total, setTotal] = useState(0);
+  const [total, setTotal] = useState(0);
   const [value, setValue] = useState(1);
   useEffect(() => {
     fetch(`https://fakestoreapi.com/products/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setProduct(data);
-        // setTotal(data?.price);
+        setTotal(parseInt(data?.price));
+        setValue(parseFloat(data?.price));
       });
   }, [id]);
   const input = document.getElementById("input");
   const plus = document.getElementById("plus");
   const minus = document.getElementById("minus");
-  const total = document.getElementById("total");
-  // console.log(total?.innerText);
+  
   let totalPrice = product?.price;
   const minusClicked = () => {
-    let prim = parseInt(input.value);
-    input.value = input.value > 0 ? prim - 1 : 0;
-    totalPrice = parseFloat(product?.price) * parseInt(input?.value);
-    console.log(totalPrice);
-    console.log(total.innerText);
-    total.innerText = `${totalPrice}`;
-    //setTotal(totalPrice);
+    if (count > 0) {
+      setCount(count - 1);
+    } else setCount(0);
+   
   };
-
+  useEffect(() => {
+    setTotal(value * count);
+  }, [count]);
   const plusClicked = () => {
-    let prim = parseInt(input?.value);
+    setCount(count + 1);
 
-    input.value = prim + 1;
-    totalPrice = parseFloat(product?.price) * parseInt(input?.value);
-    console.log(totalPrice);
-    total.innerText = `$${totalPrice}`;
+   
   };
 
   return (
@@ -57,14 +54,14 @@ const SingleCartElement = ({ id }) => {
           id="input"
           className="w-[30%] text-center"
           type="text"
-          value="1"
+          value={count}
         />{" "}
         <span onClick={plusClicked} id="plus" className="cursor-pointer">
           +
         </span>
       </td>
       <td className="">${product?.price}</td>
-      <td id="total">${totalPrice}</td>
+      <td id="total">${total}</td>
     </tr>
   );
 };
