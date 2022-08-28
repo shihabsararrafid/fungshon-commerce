@@ -23,7 +23,7 @@ const Authorization = () => {
     >
       <div className="">
         <h1 className="text-center text-3xl">
-          WELCOME <br /> PLEASE SIGN IN!
+          WELCOME <br /> PLEASE {isCreate ? "SIGN UP" : "SIGN IN!"}
         </h1>
         <div className="radio-btn my-[28px] flex justify-evenly">
           <label htmlFor="signIn">
