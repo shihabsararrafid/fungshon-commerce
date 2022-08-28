@@ -40,9 +40,9 @@ const SingleCartElement = ({ id }) => {
 
   return (
     <tr>
-      <td>
+      <td className="hidden lg:block">
         <img
-          className="w-[50px] h-[50px] object-fill"
+          className="w-[50px]   h-[50px] object-fill"
           src={product?.image}
           alt=""
           srcset=""
@@ -63,7 +63,7 @@ const SingleCartElement = ({ id }) => {
           +
         </span>
       </td>
-      <td>${product?.price}</td>
+      <td className="">${product?.price}</td>
       <td id="total">${totalPrice}</td>
     </tr>
   );

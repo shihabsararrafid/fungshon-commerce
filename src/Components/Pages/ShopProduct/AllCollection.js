@@ -11,7 +11,7 @@ const AllCollection = () => {
     navigate(`/collectionDetails/${c}`);
   };
   return (
-    <div className="my-10 lg:w-[85%] mx-auto">
+    <div className="my-10 lg:w-[85%]  mx-auto">
       <h1 className="text-4xl text-center">All Categories</h1>
 
       <div

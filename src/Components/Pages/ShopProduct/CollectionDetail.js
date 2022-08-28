@@ -13,12 +13,8 @@ const CollectionDetail = ({ getIdFromCollection }) => {
       .then((data) => setProduct(data));
   }, [category]);
   return (
-    <div className="my-10 lg:w-[85%] mx-auto">
-      <h1>Detail reporting sir</h1>
-      <p>{category}</p>
-      <h1>helllllllllllllllllllllllll</h1>
-      {product?.length}
-      <div className="grid grid-cols-3 gap-10">
+    <div className="my-10 lg:w-[85%] w-full mx-auto">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10">
         {product.map((p) => (
           <SingleProduct
             popularContainer={popularContainer}

@@ -18,7 +18,11 @@ const SingleProduct = ({ id, popularContainer }) => {
   const pdctPrice = product?.price;
   return (
     <div className="relative  rounded-lg shadow-lg">
-      <img className="h-[356px]  object-cover" src={product?.image} alt="" />
+      <img
+        className="h-[356px] block mx-auto object-cover"
+        src={product?.image}
+        alt=""
+      />
       <p className="flex text-sm gap-5  items-center">
         Ratings : <span>{product?.rating?.rate}</span>
         <Rating rating={product?.rating?.rate}></Rating>
