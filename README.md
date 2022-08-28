@@ -17,13 +17,26 @@
 <h1>Blog</h1> 
 <h1>Pages</h1> 
 
+There are three icon , if we click the <b>profile </b> icon it will move us to Authentication page where we can sign up with email password or google
+
+if we click the <b>cart</b> icon it will move use to cart items where we can see the all items moved to cart
+
 
 # HOME
 <p>In this route there are banner,counter,Special Benefit , Collection , Feature product , popular products,collection ,subscription components </p>
 <p>If I click the 'check now' button on every collection page it will move us to the that type category product</p>
 
 <h1>Popular Products</h1>
-<p>On popluar product the best product on the basis of rating has been shown . If we hover every product we will see a **Add to cart** button which will eventually add the item to cart . There are two more icon , one is **eye ** icon by clicking this we go to the detail page of that product . Which is described in the 2nd page of figma design</p>
+<p>On popluar product the best product on the basis of rating has been shown . If we hover every product we will see a <b>Add to cart</b> button which will eventually add the item to cart . There are two more icon , one is <b>eye </b> icon by clicking this we go to the detail page of that product . Which is described in the 2nd page of figma design</p>
+
+# Shop
+<p>On the shop route we will see the all the categories . If we click any of them , we will see the products under that category .From that we can add the items to cart .  </p>
+
+
+
+## If we come back to home route all the cart items will refreshed as we have not used any type of storage . 
+
+# To get the cart item easily we have used contextapi at the app.js so that the value can be accessed and passed to any components
 
 
 
