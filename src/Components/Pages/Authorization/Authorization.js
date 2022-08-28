@@ -1,10 +1,16 @@
 import React, { useState } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../../Firebase.init";
 import SocailIconSignIn from "../../Shared/SocialIcon/SocailIconSignIn";
 import Sign from "../SignIn/Sign";
 import SignUp from "../SignUp/SignUp";
+import { useNavigate } from "react-router-dom";
+import cogoToast from "cogo-toast";
 
 const Authorization = () => {
   const [isCreate, setIsCreate] = useState(false);
+  const [user, loading, error] = useAuthState(auth);
+  const navigate = useNavigate();
   const checkRadio = (name) => {
     console.log(name.target);
     // if (name.target.value === "create") {
@@ -14,6 +20,12 @@ const Authorization = () => {
     setIsCreate(!isCreate);
     // }
   };
+  if (user) {
+    cogoToast.success(" Signed In Successful", {
+      position: "top-center",
+    });
+    navigate("/user");
+  }
   console.log(isCreate);
   return (
     <div
