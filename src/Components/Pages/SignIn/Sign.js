@@ -1,8 +1,13 @@
 import { type } from "@testing-library/user-event/dist/type";
+import cogoToast from "cogo-toast";
 import React, { useState } from "react";
+import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
+import auth from "../../../Firebase.init";
 import SocailIconSignIn from "../../Shared/SocialIcon/SocailIconSignIn";
 const Sign = () => {
+  const [signInWithEmailAndPassword, user, loading, error] =
+    useSignInWithEmailAndPassword(auth);
   const {
     register,
     handleSubmit,
@@ -12,6 +17,19 @@ const Sign = () => {
 
   function onSubmit(data) {
     console.log(data);
+    const email = data?.email;
+    const password = data?.password;
+    signInWithEmailAndPassword(email, password);
+    if (error) {
+      const newmsg = error.message;
+      const wrmsg = newmsg.split("/")[1];
+
+      //setWrongmessage(wrmsg.slice(0, -2));
+      console.log(wrmsg.slice(0, -2));
+      cogoToast.warn(`${wrmsg.slice(0, -2)}`, {
+        position: "top-center",
+      });
+    }
   }
   let flag = 0;
 

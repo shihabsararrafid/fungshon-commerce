@@ -1,6 +1,17 @@
-import React from "react";
+import { async } from "@firebase/util";
+import cogoToast from "cogo-toast";
+import React, { useState } from "react";
+import {
+  useCreateUserWithEmailAndPassword,
+  useUpdateProfile,
+} from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
+import auth from "../../../Firebase.init";
 const SignUp = () => {
+  const [wrongMessage, setWrongmessage] = useState("");
+  const [createUserWithEmailAndPassword, user, loading, error] =
+    useCreateUserWithEmailAndPassword(auth);
+  const [updateProfile, updating, error1] = useUpdateProfile(auth);
   const {
     register,
     handleSubmit,
@@ -10,6 +21,31 @@ const SignUp = () => {
 
   function onSubmit(data) {
     console.log(data);
+    const email = data?.email;
+    const password = data?.password;
+    console.log(email, password);
+    createUserWithEmailAndPassword(email, password);
+    const phoneNumber = data?.phone;
+    const displayName = data?.firstName + " " + data?.lastName;
+    console.log(phoneNumber, displayName);
+    const update = async () => {
+      await updateProfile({ phoneNumber, displayName });
+    };
+    if (user) {
+      update();
+    }
+
+    if (error) {
+      const newmsg = error.message;
+      const wrmsg = newmsg.split("/")[1];
+
+      setWrongmessage(wrmsg.slice(0, -2));
+      console.log(wrmsg.slice(0, -2));
+      cogoToast.warn(`${wrmsg.slice(0, -2)}`, {
+        position: "top-center",
+      });
+    }
+    //console.log(user);
   }
   return (
     <form className="mt-[28px]" onSubmit={handleSubmit(onSubmit)}>

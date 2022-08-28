@@ -20,8 +20,8 @@ const Profile = () => {
       <h1 className="text-center text-3xl py-6">
         WELCOME , {user?.displayName}
       </h1>
-      <div className="details h-[50vh] items-center flex justify-center">
-        <div className="flex justify-between ">
+      <div className="details h-auto lg:h-[50vh] items-center flex justify-center flex-col ">
+        <div className="flex justify-between items-center lg:flex-row flex-col ">
           <div className="px-10">
             <img
               className="w-[100px] rounded-full"
