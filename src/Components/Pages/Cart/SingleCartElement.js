@@ -15,24 +15,17 @@ const SingleCartElement = ({ id }) => {
         setValue(parseFloat(data?.price));
       });
   }, [id]);
-  const input = document.getElementById("input");
-  const plus = document.getElementById("plus");
-  const minus = document.getElementById("minus");
-  
-  let totalPrice = product?.price;
+
   const minusClicked = () => {
     if (count > 0) {
       setCount(count - 1);
     } else setCount(0);
-   
   };
   useEffect(() => {
     setTotal(value * count);
   }, [count]);
   const plusClicked = () => {
     setCount(count + 1);
-
-   
   };
 
   return (
