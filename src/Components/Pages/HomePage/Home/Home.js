@@ -5,6 +5,7 @@ import Collection from "../Collection/Collection";
 import FeatureProduct from "../FeatureProduct/FeatureProduct";
 import PopularProducts from "../PopularProducts/PopularProducts";
 import Specialbenefit from "../SpecialBenefit/Specialbenefit";
+import Sunscription from "../Subscription/Sunscription";
 
 const Home = ({ getAddedCartId }) => {
   const [ids, setIds] = useState([]);
@@ -32,6 +33,7 @@ const Home = ({ getAddedCartId }) => {
       <Collection></Collection>
       <PopularProducts getCartID={getCartID}></PopularProducts>
       <FeatureProduct></FeatureProduct>
+      <Sunscription></Sunscription>
     </div>
   );
 };
