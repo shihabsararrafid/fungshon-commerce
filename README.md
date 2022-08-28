@@ -11,14 +11,19 @@
 
 
 </p>
-### Home
-### About
-### Shop
-### Blog
-### pages
-Among them ## Home 
-and ## Shop are created .
+<h1>Home</h1> 
+<h1>About</h1> 
+<h1>Shop</h1> 
+<h1>Blog</h1> 
+<h1>Pages</h1> 
+
+
 # HOME
+<p>In this route there are banner,counter,Special Benefit , Collection , Feature product , popular products,collection ,subscription components </p>
+<p>If I click the 'check now' button on every collection page it will move us to the that type category product</p>
+
+<h1>Popular Products</h1>
+<p>On popluar product the best product on the basis of rating has been shown . If we hover every product we will see a **Add to cart** button which will eventually add the item to cart . There are two more icon , one is **eye ** icon by clicking this we go to the detail page of that product . Which is described in the 2nd page of figma design</p>
 
 
 
