@@ -13,7 +13,7 @@ const Sign = () => {
     <form className="mt-[28px]" onSubmit={handleSubmit(onSubmit)}>
       <p className="my-[6px]">Email:</p>
       <input
-        className="w-[360px] bg-[#EEEEEE] outline-none h-[36px]"
+        className="sm:w-[360px] w-full bg-[#EEEEEE] outline-none h-[36px]"
         {...register("email")}
       />
       <p className="mt-[16px] mb-[6px]">Password:</p>

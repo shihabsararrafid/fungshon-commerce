@@ -16,7 +16,11 @@ const Authorization = () => {
   };
   console.log(isCreate);
   return (
-    <div className="font-sans lg:h-[120vh]  h-auto my-40 lg:my-44  items-center flex flex-col justify-center font-medium">
+    <div
+      className={`font-sans ${
+        isCreate ? "lg:h-[120vh]" : "lg:h-[70vh]"
+      }  h-auto my-40 lg:my-44  items-center flex flex-col justify-center font-medium`}
+    >
       <div className="">
         <h1 className="text-center text-3xl">
           WELCOME <br /> PLEASE SIGN IN!
