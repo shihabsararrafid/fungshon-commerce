@@ -9,6 +9,9 @@ const Collection = () => {
   const menClick = () => {
     navigate(`/collectionDetails/men's clothing`);
   };
+  const clickCollection = () => {
+    navigate(`/shop`);
+  };
   const womenClick = () => {
     navigate(`/collectionDetails/women's clothing`);
   };
@@ -21,7 +24,7 @@ const Collection = () => {
             Up to <span className="bg-[#F09522] py-1 px-3">50%</span>
             Off Sale{" "}
           </h1>
-          <p className="check-btn">
+          <p onClick={clickCollection} className="check-btn">
             Check now
             <span className="line"></span>
           </p>

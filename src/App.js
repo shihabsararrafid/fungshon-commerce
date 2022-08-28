@@ -11,6 +11,7 @@ import Footer from "./Components/Shared/Footer/Footer";
 import AllCollection from "./Components/Pages/ShopProduct/AllCollection";
 import CollectionDetail from "./Components/Pages/ShopProduct/CollectionDetail";
 import Cart from "./Components/Pages/Cart/Cart";
+import Sign from "./Components/Pages/SignIn/Sign";
 export const useCartId = createContext([]);
 function App() {
   const [cartId, setCartId] = useState([]);
@@ -111,6 +112,7 @@ function App() {
 
           <Route path="/shop" element={<AllCollection></AllCollection>}></Route>
           <Route path="/cart" element={<Cart></Cart>}></Route>
+          <Route path="/sign" element={<Sign></Sign>}></Route>
         </Routes>
         <Footer></Footer>
       </div>

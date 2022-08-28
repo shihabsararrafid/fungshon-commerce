@@ -42,7 +42,9 @@ const Header = () => {
           </ul>
           <ul className="icon flex">
             <BsSearch className="text-2xl  cursor-pointer mx-2 "></BsSearch>
-            <CgProfile className="text-2xl cursor-pointer mx-2 "></CgProfile>
+            <Link to="sign">
+              <CgProfile className="text-2xl cursor-pointer mx-2 "></CgProfile>
+            </Link>
             <p className="relative">
               <Link to="cart">
                 {" "}
