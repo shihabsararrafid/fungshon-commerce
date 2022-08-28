@@ -10,7 +10,7 @@ const CartWishlistNavigator = ({ id, isClicked }) => {
   return (
     <div>
       <div className="cartWishlistNavigator rounded-lg  absolute w-[100%] h-[100%] top-0 left-0 hover:opacity-90 duration-500 opacity-0 bg-[#8E8C86] ">
-        <div className="absolute h-full w-full left-[25%] lg:left-[30%]   top-[50%]">
+        <div className="absolute h-full w-full px-[30%] lg:px-0 lg:left-[30%]   top-[50%]">
           <button onClick={() => isClicked(id)} className="btn btn-hover">
             Add To Cart
           </button>
