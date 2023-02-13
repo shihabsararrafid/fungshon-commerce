@@ -25,29 +25,19 @@ const Header = () => {
              md:flex  md:mr-8  items-center`}
           >
             <li className="md:mx-2  my-1">
-              <Link onClick={() => setOpen(!isOpen)} to="/">
-                Home
-              </Link>{" "}
+              <Link to="/">Home</Link>{" "}
             </li>
             <li className="md:mx-2 my-1">
-              <Link onClick={() => setOpen(!isOpen)} to="/about">
-                About
-              </Link>
+              <Link to="/about">About</Link>
             </li>
             <li className="md:mx-2 my-1">
-              <Link onClick={() => setOpen(!isOpen)} to="/shop">
-                Shop
-              </Link>
+              <Link to="/shop">Shop</Link>
             </li>
             <li className="md:mx-2 my-1">
-              <Link onClick={() => setOpen(!isOpen)} to="/pages">
-                Pages
-              </Link>
+              <Link to="/pages">Pages</Link>
             </li>
             <li className="md:mx-2 my-1">
-              <Link onClick={() => setOpen(!isOpen)} to="blog">
-                Blog
-              </Link>
+              <Link to="blog">Blog</Link>
             </li>
           </ul>
           <ul className="icon flex">

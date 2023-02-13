@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import LoadData from "../../../Hooks/LoadData";
 import Circle from "../../../Shared/Circle/Circle";
 import Rating from "../../../Shared/Ratings/Rating";
@@ -8,6 +8,13 @@ import { GiSelfLove } from "react-icons/gi";
 import love from "./../../../../Images/CartRelated/love.png";
 import { Routes, Route, Link } from "react-router-dom";
 const SingleProduct = ({ id, popularContainer }) => {
+  const [hoverBlue, setHoverBlue] = useState(false);
+  const [hoverRed, setHoverRed] = useState(false);
+  const [hoverGreen, setHoverGreen] = useState(false);
+  const getColor = (color = "none") => {
+    console.log(color);
+  };
+  console.log(typeof getColor);
   const dot = ".........";
   const isClicked = (id) => {
     popularContainer(id);
@@ -41,7 +48,7 @@ const SingleProduct = ({ id, popularContainer }) => {
           </span>{" "}
         </p>
         <p>
-          <Circle></Circle>
+          <Circle getColor={getColor}></Circle>
         </p>
       </div>
       <CartWishlistNavigator
